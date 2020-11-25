@@ -32,3 +32,7 @@ output "id" {
     value = aws_instance.example.id
 }
 
+output "region" {
+    value = aws.region
+}
+
