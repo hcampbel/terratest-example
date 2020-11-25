@@ -24,6 +24,7 @@ func TestTerraformEC2Creation(t *testing.T) {
 	terraform.InitAndApply(t, terraformOptions)
 
 	id := terraform.Output(t, terraformOptions, "id")
+	// deployedRegion := terraform.Output(t, terraformOptions, "region")
 
 	instances, err := aws.GetTagsForEc2InstanceE(t, region, id)
 
